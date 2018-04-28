@@ -1,0 +1,54 @@
+.white-icon svg {
+    fill: #ffffff;
+    margin-top: 5px;
+    padding: 0px;
+}
+
+.white-icon {
+    width: 100px;
+    display: flex;
+}
+
+.pt-navbar {
+    padding-left: 0px;
+}
+
+.logo-box {
+    font-weight: bold;
+    width: 14.2%;
+}
+
+.logo {
+    border-bottom: 1px solid #4e4e52;
+    color: #f1f2f7 !important;
+    font-size: 22px;
+    font-weight: 100;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+.logo2 {
+    color:#FFC107;
+}
+
+.logo p {
+    position: relative;
+    top: 3px;
+    left: 15px;
+    text-transform: uppercase;
+}
+
+.navbar-input-container {
+    width: 33%;
+    padding-left: 15px;
+    margin-left: 20px;
+}
+
+.navbar-input-box {
+    width: 600px;
+    align-content: center;
+}
