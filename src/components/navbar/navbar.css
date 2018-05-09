@@ -13,6 +13,11 @@
     padding-left: 0px;
 }
 
+.navbar-container {
+    position: fixed;
+    width: 100vw;
+}
+
 .logo-box {
     font-weight: bold;
     width: 14.2%;
@@ -51,4 +56,10 @@
 .navbar-input-box {
     width: 600px;
     align-content: center;
+}
+
+.email {
+    font-size: 12px;
+    line-height: 40px;
+    color:#B2B6BC;
 }

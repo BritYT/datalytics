@@ -2,8 +2,10 @@
     width: 13.5%;
     background: #394B59;
     height: 95vh;
-    padding-top: 30px;
+    padding-top: 50px;
+    margin-top: 50px;
     color: white;
+    position: fixed;
 }
 
 .pt-icon {

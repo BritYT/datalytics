@@ -1,0 +1,47 @@
+.dashboardVideos {
+    position: absolute;
+    top: 200px;
+    left: 13.5%;
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+    width: 86vw;
+    grid-template-rows: auto;
+    padding: 50px;
+}
+
+.dashboard-column-names-container {
+    display: grid;
+    grid-template-columns: 150px 30% auto auto auto auto auto;
+    border-bottom: 1px rgba(178, 182, 188, 0.6) solid; 
+}
+
+.dashboard-column-name {
+    padding: 5px;
+    margin-left: 5px;
+    text-align: left; 
+    font-weight: bold;
+}
+
+.grid-item {
+    background: white;
+    height: 72px;
+    border: 1px rgba(178, 182, 188, 0.2) solid;
+    border-radius: 2px;
+}
+
+.grid-item h5 {
+    float: right;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 100;
+}
+
+.grid-item p  {
+    position: relative;
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    bottom: 5px;
+}

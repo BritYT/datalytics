@@ -1,0 +1,33 @@
+.videoContainer {
+  
+}
+
+.grid-item {
+    background: white;
+    border: 1px rgba(178, 182, 188, 0.2) solid;
+    border-radius: 2px;
+}
+
+.video-grid {
+    height: 83px;
+    display: grid;
+    grid-template-columns: 150px 30% auto auto auto auto auto;
+    border-bottom: 1px rgba(178, 182, 188, 0.6) solid; 
+    font-size: 12px;
+}
+
+.video-grid:hover {
+    background: rgb(199, 195, 209);
+    
+    cursor: pointer;
+}
+
+.video-grid-item {
+    
+}
+
+.video-grid-item p  {
+    position: relative;
+    top: 20px;
+    padding-left: 10px;
+}

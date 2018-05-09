@@ -4,10 +4,28 @@
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^2.2.1",
+    "axios": "^0.18.0",
+    "dns": "^0.2.2",
+    "fetch": "^1.1.0",
+    "firebase": "^4.13.1",
+    "history": "^4.7.2",
+    "moment": "^2.22.1",
     "react": "^16.3.2",
+    "react-browser-router": "^2.1.1",
     "react-dom": "^16.3.2",
+    "react-google-login": "^3.2.1",
+    "react-moment": "^0.7.0",
+    "react-particles-js": "^2.1.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "1.1.4",
-    "react-transition-group": "^2.3.1"
+    "react-thunk": "^1.0.0",
+    "react-transition-group": "^2.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,7 +33,5 @@
     "test": "react-scripts test --env=jsdom",
     "dev": "next"
   },
-  "devDependencies": {
-    "firebase": "^4.13.1"
-  }
+  "devDependencies": {}
 }
