@@ -13,14 +13,19 @@ import * as user from '../../../actions/index';
 import { connect } from 'react-redux';
 import store from '../../../config/store';
 
-import DashboardVideos from '../dashboardVideos/dashboardVideos'
-let dispatched = false;
+import DashboardVideos from '../dashboardVideos/dashboardVideos';
+import { withRouter, Link} from 'react-browser-router';
+
+import { Bar } from 'react-chartjs-2';
+
 
 
 class DashboardCanvas extends React.Component {
 
     constructor(props){
         super(props);
+
+
     }
 
     componentDidMount() {
@@ -38,6 +43,42 @@ class DashboardCanvas extends React.Component {
     }
 
     render(){
+
+        console.log(this.props.match)
+
+        if(this.props.match.params.videoID != null) {
+            return (
+                <React.Fragment>
+                <div className='dashboardCanvas'>
+                    <div className='backLink'><Link to='/dashboard'><span className="pt-icon-large pt-icon-undo" /></Link></div>
+                    <Card className='grid-item' interactive={false} elevation={Elevation.TWO}>
+                        <h5>Average View<br></br> Duration</h5>
+                        <p>{ (this.props.averageWatchPercentage / 1).toFixed(2)}%</p>
+                    </Card>
+                    <Card className='grid-item' interactive={false} elevation={Elevation.TWO}>
+                        <h5>Total <br></br> Watch Time</h5>
+                        <p> { (this.props.totalWatchTime / 525600).toFixed(2) } Years</p>
+                    </Card>
+                    <Card className='grid-item' interactive={false} elevation={Elevation.TWO}>
+                        <h5>Views Per <br></br> Comment</h5>
+                        <p> {this.props.totalSubscribers }</p>
+                    </Card>
+                </div>
+                <div className='chart-container'>
+                <Bar
+                xAxisID='Time'
+                yAxisID='Retentions %'
+                    options={{
+                        maintainAspectRatio: true,
+                        
+                    }}
+                />
+                </div>
+            </React.Fragment>
+
+            )
+        }
+
         return (
             <div>
                 <div className='dashboardCanvas'>
@@ -76,4 +117,4 @@ const mapStateToProps = (state) => {
   }
   
 
-export default connect(mapStateToProps)(DashboardCanvas);
+export default withRouter(connect(mapStateToProps)(DashboardCanvas));

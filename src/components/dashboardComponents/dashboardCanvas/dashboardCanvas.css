@@ -6,7 +6,7 @@
     grid-column-gap: 50px;
     grid-row-gap: 50px;
     width: 86vw;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: auto auto auto;
     padding: 50px;
 }
 
@@ -28,7 +28,21 @@
 .grid-item p  {
     position: relative;
     float: left;
-    font-size: 25px;
+    font-size: 20px;
+    padding-top: 7px;
     font-weight: bold;
     bottom: 5px;
+}
+
+.backLink{
+    position: absolute;
+    left: 20px;
+    top: 8%; 
+}
+
+.chart-container {
+    position: relative;
+    left: 14.5%;
+    top: 200px;
+    height: 200px;
 }

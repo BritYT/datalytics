@@ -45,7 +45,8 @@ class App extends Component {
             <Route path='/login' history render={() => firebase.isAuthenticated() ? (<Redirect to='/dashboard'/>) :(<LoginPage/> )}/>
             <Route path='/signup' history component={SignupPage}/>
             <Route path='/youtubeauth' history render={() => firebase.isYoutubeAuthed() ? (<YouTubeAuthPage />) : (<Redirect to='/dashboard'/>)}  />
-            <Route path='/dashboard' render={() => firebase.isAuthenticated() ? (<Dashboard />) : (<Redirect to='/login'/>)} />
+            <Route exact path='/dashboard' render={(props) => firebase.isAuthenticated() ? (<Dashboard  {...props}/>) : (<Redirect to='/login'/>)} />
+            <Route exact strict path='/dashboard/:videoID' render={({match}) => firebase.isAuthenticated() ? (<Dashboard params={match.params}/>) : (<Redirect to='/login'/>)} />
           </React.Fragment> 
         </BrowserRouter>
     );

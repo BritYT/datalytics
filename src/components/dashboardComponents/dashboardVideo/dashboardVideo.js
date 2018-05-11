@@ -10,8 +10,7 @@ import * as user from '../../../actions/index';
 import { connect } from 'react-redux';
 import store from '../../../config/store';
 
-let dispatched = false;
-
+import { Link } from 'react-browser-router';
 
 class Video extends React.Component {
 
@@ -26,7 +25,11 @@ class Video extends React.Component {
     }
 
     render(){
+
+        const videoLink = '/dashboard/' + this.props.videoID;
+
         return (
+            <Link to={videoLink}>
             <div className='videoContainer'>
                 <div className='video-grid'>
                     <div className='video-grid-item'><img src={this.props.thumbnail} width="150" height='100%'/></div>
@@ -38,6 +41,7 @@ class Video extends React.Component {
                     <div className='video-grid-item'><p>Positive</p></div>
                 </div>
             </div>
+            </Link>
         );
     }
 }
